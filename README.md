@@ -58,11 +58,9 @@ It's quite obvious that even when no trigger is passed the debug mode is extreme
 
 When running the same tests on a PHP 7.4 and XDEBUG_MODE debug
 ```
-docker build -e PHP_VERSION=7.4 --build-arg XDEBUG_MODE=debug -t xdebug-test/xdebug-debug:7.4 .
+docker build --build-arg PHP_VERSION=7.4 --build-arg XDEBUG_MODE=debug -t xdebug-test/xdebug-debug:7.4 .
 docker run docker.io/xdebug-test/xdebug-debug:7.4 php /var/www/html/bench.php
 ```
 We get a total time of 6.5593 s compared to 1.9230 s which is an acceptable difference.
-
-
 
 
