@@ -5,7 +5,7 @@ PHP 8.x with xdebug enabled on debug mode, seems to be extremely slow. I have al
 ## How to use?
 Initialise the submodule with the benchmark script by @SergiX44.
 ```
-git submodule init php-benchmark-script
+git submodule update --init
 ```
 
 Build the images (ensure that you are in the current folder).

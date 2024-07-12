@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 ENV DEBIAN_FRONTEND=noninteractive
-ARG PHP_VERSION 8.0
+ARG PHP_VERSION=8.0
 
 RUN apt-get update \
     && apt-get install -y software-properties-common \
@@ -13,7 +13,7 @@ RUN touch /var/log/xdebug.log && chmod 0777 /var/log/xdebug.log
 
 COPY xdebug.ini /etc/php/$PHP_VERSION/cli/conf.d/xdebug.ini
 
-# Replace the
+# Replace the mode in the xdebug file using sed.
 ARG XDEBUG_MODE=debug
 RUN sed -i "s/XDEBUG_MODE/$XDEBUG_MODE/g" /etc/php/$PHP_VERSION/cli/conf.d/xdebug.ini
 
