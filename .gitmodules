@@ -1,0 +1,4 @@
+[submodule "php-benchmark-script"]
+	branch = master
+	path = php-benchmark-script
+	url = git@github.com:sergix44/php-benchmark-script.git
